@@ -28,7 +28,7 @@ function Card(props) {
 
   return (
     <article className="element">
-      <img className="element__image" src={props.link} aria-label={props.name} onClick={handleCardClick}/>
+      <img className="element__image" src={props.link} alt={props.name} onClick={handleCardClick}/>
       <button className={cardDeleteButtonClassName} type="button" aria-label="корзина" onClick={handleCardDelete}></button>
       <div className="element__container">
         <h2 className="element__title">{props.name}</h2>
