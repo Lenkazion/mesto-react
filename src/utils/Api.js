@@ -69,6 +69,10 @@ class Api {
       })
         .then(this._handleResponse);
     }
+    
+    changeCardLikeStatus(data, isLiked) {
+      return isLiked ? this.setDislike(data) : this.setLike(data);
+    }
   
     setDislike(data) {
       return fetch(`${this._baseUrl}cards/likes/${data}`, {
